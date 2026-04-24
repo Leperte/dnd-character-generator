@@ -12,7 +12,7 @@ function diceroll() {
     return {
         rolls: results,
         dropped: lowest,
-        total: results.reduce((sum, val) => sum + val, 0)
+        total: results.slipe(0, 3).reduce((sum, val) => sum + val, 0)
     };
 }
 
